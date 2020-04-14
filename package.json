@@ -1,0 +1,32 @@
+{
+  "name": "grafana-status-chart",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "tdd": "grafana-toolkit plugin:test --watch",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "lint": "eslint --config ./node_modules/@grafana/eslint-config/index.js --fix ./src --ext .js --ext .jsx --ext .ts --ext .tsx"
+  },
+  "repository": "https://github.com/majidmade/grafana-status-chart",
+  "author": "Majid Razvi",
+  "license": "MIT",
+  "devDependencies": {
+    "@grafana/data": "next",
+    "@grafana/toolkit": "next",
+    "@grafana/ui": "next",
+    "@types/lodash": "^4.14.149"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.9.0"
+  },
+  "engines": {
+    "node": ">=12 <13"
+  },
+  "dependencies": {
+    "davi-js": "^6.4.1",
+    "lodash": "^4.17.15"
+  }
+}

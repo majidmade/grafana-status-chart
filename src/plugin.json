@@ -1,0 +1,34 @@
+{
+  "type": "panel",
+  "name": "Healthwatch Status Chart",
+  "id": "vmware-status-chart",
+  "info": {
+    "description": "",
+    "author": {
+      "name": "Majid Razvi",
+      "url": ""
+    },
+    "keywords": [],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "",
+        "url": ""
+      },
+      {
+        "name": "",
+        "url": ""
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
