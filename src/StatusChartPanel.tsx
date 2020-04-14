@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useMemo, useCallback } from 'react';
-import { AppEvents, PanelProps } from '@grafana/data';
+import { PanelProps } from '@grafana/data';
 import { SyncProvider, StatusChart, IChartThresholdType, ISeriesThreshold, ISyncProvider } from 'davi-js';
 import { StatusChartOptions } from './StatusChartOptions';
 import { mapGrafanaToDavi } from 'DataAdapter';
