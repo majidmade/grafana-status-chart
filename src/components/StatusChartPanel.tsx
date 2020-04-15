@@ -1,13 +1,14 @@
 import React, { FunctionComponent, useMemo } from 'react';
 import { SelectedIndexProvider, StatusChart } from 'davi-js';
 import { PanelProps } from '@grafana/data';
-import { useControlledZoom, useControlledCrosshair } from 'hooks';
+import { useControlledZoom, useControlledCrosshair, useGrafanaTheme } from 'hooks';
 import { mapGrafanaToDavi } from 'DataAdapter';
 import { StatusChartOptions } from './StatusChartOptions';
 
 interface StatusChartProps extends PanelProps<StatusChartOptions> {}
 
 const WrappedStatusChart: FunctionComponent<StatusChartProps> = ({ data, timeRange, onChangeTimeRange, id, options: { animation, thresholds } }) => {
+  useGrafanaTheme();
   const transformedData = useMemo(() => mapGrafanaToDavi(data), [data]);
   const controlledZoom = useControlledZoom({ timeRange, onChangeTimeRange });
   const controlledCrosshair = useControlledCrosshair(id);
@@ -17,11 +18,11 @@ const WrappedStatusChart: FunctionComponent<StatusChartProps> = ({ data, timeRan
       <StatusChart
         {...controlledZoom}
         {...controlledCrosshair}
-        zoomEnabled
-        showDidNotRun={false}
         animation={animation}
         thresholds={thresholds}
         data={transformedData}
+        zoomEnabled={true}
+        showDidNotRun={false}
       />
     </SelectedIndexProvider>
   );
