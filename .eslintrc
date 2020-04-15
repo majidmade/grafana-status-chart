@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "react-hooks"
+  ],
+  "extends": [
+    "@grafana/eslint-config/index.js",
+    "plugin:react-hooks/recommended"
+  ]
+}

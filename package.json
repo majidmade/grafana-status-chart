@@ -8,7 +8,7 @@
     "tdd": "grafana-toolkit plugin:test --watch",
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch",
-    "lint": "eslint --config ./node_modules/@grafana/eslint-config/index.js --fix ./src --ext .js --ext .jsx --ext .ts --ext .tsx"
+    "lint": "eslint --fix ./src --ext .js --ext .jsx --ext .ts --ext .tsx"
   },
   "repository": "https://github.com/majidmade/grafana-status-chart",
   "author": "Majid Razvi",
@@ -18,7 +18,8 @@
     "@grafana/toolkit": "next",
     "@grafana/ui": "next",
     "@types/grafana": "https://git@github.com/CorpGlory/types-grafana.git",
-    "@types/lodash": "^4.14.149"
+    "@types/lodash": "^4.14.149",
+    "eslint-plugin-react-hooks": "^3.0.0"
   },
   "resolutions": {
     "@babel/preset-env": "7.9.0"

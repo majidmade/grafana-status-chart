@@ -24,7 +24,7 @@ export const useControlledCrosshair: () => SharedCrosshair = () => {
       appEvents.off('graph-hover', receiveCrosshair);
       appEvents.off('graph-hover-clear', receiveCrosshair);
     };
-  }, []);
+  }, [receiveCrosshair]);
 
   return {
     value: crosshair,
