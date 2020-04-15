@@ -8,11 +8,11 @@ import { StatusChartOptions } from './StatusChartOptions';
 interface StatusChartProps extends PanelProps<StatusChartOptions> {}
 
 const WrappedStatusChart: FunctionComponent<StatusChartProps> = props => {
-  const { data, timeRange, onChangeTimeRange, options } = props;
+  const { data, timeRange, onChangeTimeRange, options, id } = props;
   const { animation, thresholds } = options;
   const transformedData = useMemo(() => mapGrafanaToDavi(data), [data]);
   const controlledZoom = useControlledZoom({ timeRange, onChangeTimeRange });
-  const controlledCrosshair = useControlledCrosshair();
+  const controlledCrosshair = useControlledCrosshair(id);
 
   return (
     <SelectedIndexProvider {...controlledCrosshair}>
