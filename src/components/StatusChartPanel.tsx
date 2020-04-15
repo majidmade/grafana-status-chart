@@ -18,8 +18,6 @@ const WrappedStatusChart: FunctionComponent<StatusChartProps> = ({ data, timeRan
         {...controlledZoom}
         {...controlledCrosshair}
         zoomEnabled
-        xAxisSnappedTicks
-        showTooltipForAllSeries
         showDidNotRun={false}
         animation={animation}
         thresholds={thresholds}
