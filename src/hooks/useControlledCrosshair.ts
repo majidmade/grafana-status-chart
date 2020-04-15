@@ -14,7 +14,7 @@ export const useControlledCrosshair: (id: number) => SharedCrosshair = (id) => {
   const receiveCrosshair = useCallback((e: any /* TODO: type */) => setCrosshair(e?.pos?.x), []);
   const emitCrosshair = useCallback((x: number) => {
     setCrosshair(x);
-    appEvents.emit('graph-hover', { pos: { x }, panel: { id } });
+    appEvents.emit('graph-hover', { pos: { x, panelRelY: 0.5 }, panel: { id } });
   }, []);
 
   useEffect(() => {
