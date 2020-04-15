@@ -11,7 +11,7 @@ i installed grafana via `brew` and use `brew services start grafana` to run it.
 my `/usr/local/etc/grafana/grafana.ini` has the following entry:
 
 ```ini
-plugins = /Users/mrazvi/workspace/healthwatch/releases/grafana-release/jobs/grafana/templates/plugins
+plugins = /Users/mrazvi/workspace/grafana-status-chart
 ```
 
 then use `yarn watch`, or one of the other compilation commands as appropriate. the first time you build, you may need to restart grafana; subsequent builds should update automatically.

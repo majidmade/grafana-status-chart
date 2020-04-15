@@ -1,7 +1,7 @@
 {
   "type": "panel",
-  "name": "Healthwatch Status Chart",
-  "id": "vmware-status-chart",
+  "name": "Status Chart",
+  "id": "davi-status-chart",
   "info": {
     "description": "",
     "author": {

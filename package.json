@@ -17,7 +17,8 @@
     "@grafana/data": "next",
     "@grafana/toolkit": "next",
     "@grafana/ui": "next",
-    "@types/lodash": "^4.14.149"
+    "@types/lodash": "^4.14.149",
+    "@types/grafana": "https://git@github.com/CorpGlory/types-grafana.git"
   },
   "resolutions": {
     "@babel/preset-env": "7.9.0"
@@ -26,6 +27,7 @@
     "node": ">=12 <13"
   },
   "dependencies": {
+    "@grafana/runtime": "^6.7.2",
     "davi-js": "^6.4.1",
     "lodash": "^4.17.15"
   }
