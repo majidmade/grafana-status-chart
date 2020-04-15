@@ -8,7 +8,7 @@ interface SharedCrosshair {
   onCrosshairHover: (x: number) => void;
 }
 
-export const useControlledCrosshair: (id: number) => SharedCrosshair = (id) => {
+export const useControlledCrosshair: (id: number) => SharedCrosshair = id => {
   const [crosshair, setCrosshair] = useState<Crosshair>(undefined);
   const receiveCrosshair = useCallback((e: any /* TODO: type */) => setCrosshair(e?.pos?.x), []);
   useEffect(() => {
@@ -20,10 +20,13 @@ export const useControlledCrosshair: (id: number) => SharedCrosshair = (id) => {
     };
   }, [receiveCrosshair]);
 
-  const emitCrosshair = useCallback((x: number) => {
-    setCrosshair(x);
-    appEvents.emit('graph-hover', { pos: { x, panelRelY: 0.5 }, panel: { id } });
-  }, []);
+  const emitCrosshair = useCallback(
+    (x: number) => {
+      setCrosshair(x);
+      appEvents.emit('graph-hover', { pos: { x, panelRelY: 0.5 }, panel: { id } });
+    },
+    [id]
+  );
 
   return {
     value: crosshair,
